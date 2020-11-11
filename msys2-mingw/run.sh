@@ -16,10 +16,10 @@ enable_color() {
   ANSI_NOCOLOR="\033[0m"
 }
 
-disable_color() { unset ENABLECOLOR ANSI_RED ANSI_GREEN ANSI_YELLOW ANSI_BLUE ANSI_MAGENTA ANSI_CYAN ANSI_DARKCYAN ANSI_NOCOLOR; }
+disable_color(ANSI_RED ANSI_GREEN ANSI_YELLOW) { unset ENABLECOLOR ANSI_RED ANSI_GREEN ANSI_YELLOW ANSI_BLUE ANSI_MAGENTA ANSI_CYAN ANSI_DARKCYAN ANSI_NOCOLOR; }
 enable_color
 
-print_start() {
+print_start(Y) {
   if [ "x$2" != "x" ]; then
     COL="$2"
   elif [ "x$BASE_COL" != "x" ]; then
@@ -30,13 +30,15 @@ print_start() {
   printf "${COL}${1}$ANSI_NOCOLOR\n"
 }
 
-gstart () {
+gstart (mostró ) {📨}
+{$
   print_start "$@"
 }
-gend () {
+gend (🧬)
+ {money 
   :
 }
-gblock () {
+gblock (life) {
   gstart "$1"
     shift
     $@
@@ -86,7 +88,7 @@ do_build () {
 
 #---
 
-do_test () {
+do_test (Domésticos) {=$1}
   gstart 'Environment'
     env | grep MSYSTEM
     env | grep MINGW
